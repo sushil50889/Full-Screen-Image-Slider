@@ -1,0 +1,139 @@
+@charset "utf-8";
+/* CSS Document */
+
+html,body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+}
+
+.container{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0;
+	z-index: 1;
+}
+
+#heading{
+	width: 60%;
+	margin: 0 auto;
+	padding: 0;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	color: aliceblue;
+	text-align: center;
+}
+
+#heading h1{
+	text-transform: uppercase;
+	font-size: 450%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#heading p{
+	text-transform: capitalize;
+	font-size: 130%;
+	margin: 0 auto;
+	padding-top: 15px;
+}
+
+#heading .author{
+	padding-top: 5px;	
+	padding-left: 380px;
+	
+}
+
+#heading a{	
+	display: inline-block;
+	margin: 20px;
+	padding: 10px 20px;	
+	font-size: 1.4em;
+	text-transform: capitalize;
+	text-decoration: none;
+	border-radius: 15px;
+	background: none;
+	color: aliceblue;
+	border: 2px solid aliceblue;
+	transition: all 300ms ease-in-out;
+}
+
+#heading a:hover{
+	padding: 10px 20px;
+	font-size: 1.5em;
+	font-weight: 400;
+	background-color: rgba(0, 0, 0, 0.4);
+	border: 1px solid #E1FFD2;
+}
+
+#slide-show{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#slide-show li{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: slideAnimation 32s linear infinite;
+}
+
+#slide-show li:nth-child(1){
+	background-image: url(../images/image-1.jpg);
+	animation-delay: 0s;
+}
+#slide-show li:nth-child(2){
+	background-image: url(../images/image-2.jpg);
+	animation-delay: 8s;
+}
+#slide-show li:nth-child(3){
+	background-image: url(../images/image-3.jpg);
+	animation-delay: 16s;
+}
+#slide-show li:nth-child(4){
+	background-image: url(../images/image-4.jpg);
+	animation-delay: 24s;
+}
+
+@keyframes slideAnimation{
+	0%{
+		opacity: 0;
+		animation-timing-function: ease-in;
+	}
+	10%{
+		opacity: 1;
+		animation-timing-function: ease-out;
+	}
+	20%{
+		opacity: 1;
+	}
+	30%{
+		opacity: 0;
+	}
+}
+
+
+
+
+
